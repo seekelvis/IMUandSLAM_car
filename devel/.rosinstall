@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/IMU_Trans/catkin_ws/devel/setup.sh
