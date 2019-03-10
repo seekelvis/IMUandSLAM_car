@@ -223,6 +223,9 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
@@ -259,6 +262,21 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//Path to a file.
+_path_name:FILEPATH=/home/pi/IMU_Trans/catkin_ws/src/camera_calibration/test/multiple_boards.py
+
+//Value Computed by CMake
+camera_calibration_BINARY_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/build/camera_calibration
+
+//Value Computed by CMake
+camera_calibration_SOURCE_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/src/camera_calibration
+
+//The directory containing a CMake configuration file for camera_calibration_parsers.
+camera_calibration_parsers_DIR:PATH=/opt/ros/kinetic/share/camera_calibration_parsers/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=/opt/ros/kinetic/share/camera_info_manager/cmake
+
 //Value Computed by CMake
 car_BINARY_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/build/car
 
@@ -268,8 +286,14 @@ car_SOURCE_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/src/car
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/kinetic/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/build/gtest
@@ -311,11 +335,20 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/librostime.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libcamera_calibration_parsers.so
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
@@ -332,14 +365,35 @@ roscpp_traits_DIR:PATH=/opt/ros/kinetic/share/roscpp_traits/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
+
+//The directory containing a CMake configuration file for rospack.
+rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
+
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
 
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
+
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
+
+//Value Computed by CMake
+usb_cam_BINARY_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/build/usb_cam
+
+//Dependencies for the target
+usb_cam_LIB_DEPENDS:STATIC=general;avcodec;general;swscale;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/kinetic/lib/libcamera_info_manager.so;general;/opt/ros/kinetic/lib/libcamera_calibration_parsers.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/arm-linux-gnueabihf/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
+
+//Value Computed by CMake
+usb_cam_SOURCE_DIR:STATIC=/home/pi/IMU_Trans/catkin_ws/src/usb_cam
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
@@ -446,7 +500,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -485,6 +539,8 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
 //Details about finding Threads
@@ -509,10 +565,83 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+__pkg_config_checked_avcodec:INTERNAL=1
+__pkg_config_checked_swscale:INTERNAL=1
+avcodec_CFLAGS:INTERNAL=-I/usr/include/arm-linux-gnueabihf
+avcodec_CFLAGS_I:INTERNAL=
+avcodec_CFLAGS_OTHER:INTERNAL=
+avcodec_FOUND:INTERNAL=1
+avcodec_INCLUDEDIR:INTERNAL=/usr/include/arm-linux-gnueabihf
+avcodec_INCLUDE_DIRS:INTERNAL=/usr/include/arm-linux-gnueabihf
+avcodec_LDFLAGS:INTERNAL=-lavcodec
+avcodec_LDFLAGS_OTHER:INTERNAL=
+avcodec_LIBDIR:INTERNAL=/usr/lib/arm-linux-gnueabihf
+avcodec_LIBRARIES:INTERNAL=avcodec
+avcodec_LIBRARY_DIRS:INTERNAL=
+avcodec_LIBS:INTERNAL=
+avcodec_LIBS_L:INTERNAL=
+avcodec_LIBS_OTHER:INTERNAL=
+avcodec_LIBS_PATHS:INTERNAL=
+avcodec_PREFIX:INTERNAL=/usr
+avcodec_STATIC_CFLAGS:INTERNAL=-I/usr/include/arm-linux-gnueabihf
+avcodec_STATIC_CFLAGS_I:INTERNAL=
+avcodec_STATIC_CFLAGS_OTHER:INTERNAL=
+avcodec_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/arm-linux-gnueabihf
+avcodec_STATIC_LDFLAGS:INTERNAL=-L/opt/vc/lib/;-lavcodec;-ldl;-lXv;-lX11;-lXext;-ldl;-lxcb;-lxcb-xfixes;-lxcb-render;-lxcb-shape;-lxcb;-lxcb-shape;-lxcb;-lX11;-lcdio_paranoia;-lcdio_cdda;-lcdio;-lsndio;-ljack;-lasound;-lSDL2;-ldc1394;-lGL;-lopenal;-lmmal_core;-lmmal_util;-lmmal_vc_client;-lbcm_host;-lzvbi;-lzmq;-lxvidcore;-lx265;-lx264;-lwebp;-lwavpack;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvpx;-lm;-lvorbisenc;-lvorbis;-logg;-ltwolame;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lssh;-lsoxr;-lsnappy;-lm;-lshine;-lrubberband;-lpulse;-lopus;-lopenjp2;-DOPJ_STATIC;-lopencv_core;-lopencv_imgproc;-lmp3lame;-lmodplug;-lgsm;-lgme;-lstdc++;-lfribidi;-lfreetype;-lfontconfig;-lfreetype;-lflite_cmu_time_awb;-lflite_cmu_us_awb;-lflite_cmu_us_kal;-lflite_cmu_us_kal16;-lflite_cmu_us_rms;-lflite_cmu_us_slt;-lflite_usenglish;-lflite_cmulex;-lflite;-lebur128;-lcaca;-lbs2b;-lbluray;-lass;-lraw1394;-lavc1394;-lrom1394;-liec61883;-lgnutls;-lchromaprint;-ldl;-lm;-llzma;-lbz2;-lz;-pthread;-lswresample;-lm;-lsoxr;-lavutil;-lm
+avcodec_STATIC_LDFLAGS_OTHER:INTERNAL=-DOPJ_STATIC;-pthread
+avcodec_STATIC_LIBDIR:INTERNAL=
+avcodec_STATIC_LIBRARIES:INTERNAL=avcodec;dl;Xv;X11;Xext;dl;xcb;xcb-xfixes;xcb-render;xcb-shape;xcb;xcb-shape;xcb;X11;cdio_paranoia;cdio_cdda;cdio;sndio;jack;asound;SDL2;dc1394;GL;openal;mmal_core;mmal_util;mmal_vc_client;bcm_host;zvbi;zmq;xvidcore;x265;x264;webp;wavpack;vpx;m;vpx;m;vpx;m;vpx;m;vorbisenc;vorbis;ogg;twolame;theoraenc;theoradec;ogg;speex;ssh;soxr;snappy;m;shine;rubberband;pulse;opus;openjp2;opencv_core;opencv_imgproc;mp3lame;modplug;gsm;gme;stdc++;fribidi;freetype;fontconfig;freetype;flite_cmu_time_awb;flite_cmu_us_awb;flite_cmu_us_kal;flite_cmu_us_kal16;flite_cmu_us_rms;flite_cmu_us_slt;flite_usenglish;flite_cmulex;flite;ebur128;caca;bs2b;bluray;ass;raw1394;avc1394;rom1394;iec61883;gnutls;chromaprint;dl;m;lzma;bz2;z;swresample;m;soxr;avutil;m
+avcodec_STATIC_LIBRARY_DIRS:INTERNAL=/opt/vc/lib/
+avcodec_STATIC_LIBS:INTERNAL=
+avcodec_STATIC_LIBS_L:INTERNAL=
+avcodec_STATIC_LIBS_OTHER:INTERNAL=
+avcodec_STATIC_LIBS_PATHS:INTERNAL=
+avcodec_VERSION:INTERNAL=57.64.100
+avcodec_libavcodec_INCLUDEDIR:INTERNAL=
+avcodec_libavcodec_LIBDIR:INTERNAL=
+avcodec_libavcodec_PREFIX:INTERNAL=
+avcodec_libavcodec_VERSION:INTERNAL=
+prefix_result:INTERNAL=/usr/lib/arm-linux-gnueabihf
+swscale_CFLAGS:INTERNAL=-I/usr/include/arm-linux-gnueabihf
+swscale_CFLAGS_I:INTERNAL=
+swscale_CFLAGS_OTHER:INTERNAL=
+swscale_FOUND:INTERNAL=1
+swscale_INCLUDEDIR:INTERNAL=/usr/include/arm-linux-gnueabihf
+swscale_INCLUDE_DIRS:INTERNAL=/usr/include/arm-linux-gnueabihf
+swscale_LDFLAGS:INTERNAL=-lswscale
+swscale_LDFLAGS_OTHER:INTERNAL=
+swscale_LIBDIR:INTERNAL=/usr/lib/arm-linux-gnueabihf
+swscale_LIBRARIES:INTERNAL=swscale
+swscale_LIBRARY_DIRS:INTERNAL=
+swscale_LIBS:INTERNAL=
+swscale_LIBS_L:INTERNAL=
+swscale_LIBS_OTHER:INTERNAL=
+swscale_LIBS_PATHS:INTERNAL=
+swscale_PREFIX:INTERNAL=/usr
+swscale_STATIC_CFLAGS:INTERNAL=-I/usr/include/arm-linux-gnueabihf
+swscale_STATIC_CFLAGS_I:INTERNAL=
+swscale_STATIC_CFLAGS_OTHER:INTERNAL=
+swscale_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/arm-linux-gnueabihf
+swscale_STATIC_LDFLAGS:INTERNAL=-lswscale;-lm;-lavutil;-lm
+swscale_STATIC_LDFLAGS_OTHER:INTERNAL=
+swscale_STATIC_LIBDIR:INTERNAL=
+swscale_STATIC_LIBRARIES:INTERNAL=swscale;m;avutil;m
+swscale_STATIC_LIBRARY_DIRS:INTERNAL=
+swscale_STATIC_LIBS:INTERNAL=
+swscale_STATIC_LIBS_L:INTERNAL=
+swscale_STATIC_LIBS_OTHER:INTERNAL=
+swscale_STATIC_LIBS_PATHS:INTERNAL=
+swscale_VERSION:INTERNAL=4.2.100
+swscale_libswscale_INCLUDEDIR:INTERNAL=
+swscale_libswscale_LIBDIR:INTERNAL=
+swscale_libswscale_PREFIX:INTERNAL=
+swscale_libswscale_VERSION:INTERNAL=
 
