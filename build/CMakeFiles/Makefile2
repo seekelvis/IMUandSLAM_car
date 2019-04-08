@@ -993,6 +993,7 @@ clean: camera_calibration/CMakeFiles/multi_board_calibration.tar.gz.dir/clean
 # Convenience name for "all" pass in the directory.
 usb_cam/all: usb_cam/CMakeFiles/usb_cam.dir/all
 usb_cam/all: usb_cam/CMakeFiles/usb_cam_node.dir/all
+usb_cam/all: usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/all
 
 .PHONY : usb_cam/all
 
@@ -1013,6 +1014,7 @@ usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/usb_cam_node.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 usb_cam/clean: usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
@@ -1551,6 +1553,43 @@ usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/all: usb_cam/CMakeFiles/usb_cam.dir/all
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/IMU_Trans/catkin_ws/build/CMakeFiles --progress-num=16,17 "Built target usb_cam_node_240p_10f"
+.PHONY : usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/all
+
+# Include target in all.
+all: usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/IMU_Trans/catkin_ws/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/IMU_Trans/catkin_ws/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule
+
+# Convenience name for target.
+usb_cam_node_240p_10f: usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule
+
+.PHONY : usb_cam_node_240p_10f
+
+# clean rule for target.
+usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/clean
+.PHONY : usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/clean
+
+# clean rule for target.
+clean: usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/clean
 
 .PHONY : clean
 

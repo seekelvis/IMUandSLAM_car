@@ -246,6 +246,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "usb_cam/CMakeFiles/usb_cam_node.dir/DependInfo.cmake"
   "usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
+  "usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/DependInfo.cmake"
   "usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake"
   "usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/DependInfo.cmake"
   "usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/DependInfo.cmake"

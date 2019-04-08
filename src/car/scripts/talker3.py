@@ -11,7 +11,7 @@ from std_msgs.msg import String
 from sensor_msgs.msg import Imu
 from geometry_msgs.msg import Quaternion, Vector3
 import serial
-ser = serial.Serial("/dev/ttyAMA0", 9600)
+ser = serial.Serial("/dev/ttyAMA0", 115200)
 count = 0
 imuMsg = Imu()
 def decode(datah,datal):
@@ -24,12 +24,17 @@ def talker():
     global count
     global imuMsg
     pub = rospy.Publisher('IMU_data', Imu, queue_size=10)
+    origintime = 0
+    realtime = 0
     rospy.init_node('talker', anonymous=True)
-    rate = rospy.Rate(50) # 10hz
+    rate = rospy.Rate(100) # 100hz
     while not rospy.is_shutdown():
         #print "=================================="+str(count)
 	#imuMsg = Imu()
         imuMsg.header.stamp, imuMsg.header.frame_id = rospy.get_rostime(), "base_link"
+	if origintime == 0:
+	    origintime = imuMsg.header.stamp
+	realtime = float(imuMsg.header.stamp.secs - origintime.secs) + float(imuMsg.header.stamp.nsecs - origintime.nsecs)/1000000000
 	#print "timestamp--"+str(imuMsg.header.stamp)
 	data = binascii.b2a_hex(ser.read())
         if data == '55':
@@ -95,11 +100,11 @@ def talker():
 	#	print "ang:(roll,pitch,yaw) ("+str(roll)+", "+str(pitch)+", "+str(yaw)+")"
 	    	pub.publish(imuMsg)
 		count = count + 1
-		print "=================================="+str(count)
-		print "timestamp--"+str(imuMsg.header.stamp)
+		print "=================================="+str(count),"============",realtime
+		#print "timestamp--"+str(imuMsg.header.stamp)
 		print "acc: ("+str(imuMsg.linear_acceleration.x)+", "+str(imuMsg.linear_acceleration.y)+", "+str(imuMsg.linear_acceleration.z)+")"
-                print "gyr:(roll,pitch,yaw)  ("+str(imuMsg.angular_velocity.x)+", "+str(imuMsg.angular_velocity.y)+", "+str(imuMsg.angular_velocity.z)+")"
-                print "ang:(roll,pitch,yaw) ("+str(roll)+", "+str(pitch)+", "+str(yaw)+")"
+                #print "gyr:(roll,pitch,yaw)  ("+str(imuMsg.angular_velocity.x)+", "+str(imuMsg.angular_velocity.y)+", "+str(imuMsg.angular_velocity.z)+")"
+                #print "ang:(roll,pitch,yaw) ("+str(roll)+", "+str(pitch)+", "+str(yaw)+")"
 
             	rate.sleep()
         

@@ -406,6 +406,21 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
+usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule:
+	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule
+.PHONY : usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule
+
+# Convenience name for target.
+usb_cam_node_240p_10f: usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/rule
+
+.PHONY : usb_cam_node_240p_10f
+
+# fast build rule for target.
+usb_cam_node_240p_10f/fast:
+	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build
+.PHONY : usb_cam_node_240p_10f/fast
+
+# Convenience name for target.
 usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
 	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 .PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
@@ -597,6 +612,33 @@ nodes/usb_cam_node.cpp.s:
 	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/nodes/usb_cam_node.cpp.s
 .PHONY : nodes/usb_cam_node.cpp.s
 
+nodes/usb_cam_node_240p_10f.o: nodes/usb_cam_node_240p_10f.cpp.o
+
+.PHONY : nodes/usb_cam_node_240p_10f.o
+
+# target to build an object file
+nodes/usb_cam_node_240p_10f.cpp.o:
+	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/nodes/usb_cam_node_240p_10f.cpp.o
+.PHONY : nodes/usb_cam_node_240p_10f.cpp.o
+
+nodes/usb_cam_node_240p_10f.i: nodes/usb_cam_node_240p_10f.cpp.i
+
+.PHONY : nodes/usb_cam_node_240p_10f.i
+
+# target to preprocess a source file
+nodes/usb_cam_node_240p_10f.cpp.i:
+	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/nodes/usb_cam_node_240p_10f.cpp.i
+.PHONY : nodes/usb_cam_node_240p_10f.cpp.i
+
+nodes/usb_cam_node_240p_10f.s: nodes/usb_cam_node_240p_10f.cpp.s
+
+.PHONY : nodes/usb_cam_node_240p_10f.s
+
+# target to generate assembly for a file
+nodes/usb_cam_node_240p_10f.cpp.s:
+	cd /home/pi/IMU_Trans/catkin_ws/build && $(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/nodes/usb_cam_node_240p_10f.cpp.s
+.PHONY : nodes/usb_cam_node_240p_10f.cpp.s
+
 src/usb_cam.o: src/usb_cam.cpp.o
 
 .PHONY : src/usb_cam.o
@@ -652,6 +694,7 @@ help:
 	@echo "... usb_cam_node"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... usb_cam_node_240p_10f"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -667,6 +710,9 @@ help:
 	@echo "... nodes/usb_cam_node.o"
 	@echo "... nodes/usb_cam_node.i"
 	@echo "... nodes/usb_cam_node.s"
+	@echo "... nodes/usb_cam_node_240p_10f.o"
+	@echo "... nodes/usb_cam_node_240p_10f.i"
+	@echo "... nodes/usb_cam_node_240p_10f.s"
 	@echo "... src/usb_cam.o"
 	@echo "... src/usb_cam.i"
 	@echo "... src/usb_cam.s"

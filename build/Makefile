@@ -712,6 +712,19 @@ roscpp_generate_messages_lisp/fast:
 .PHONY : roscpp_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named usb_cam_node_240p_10f
+
+# Build rule for target.
+usb_cam_node_240p_10f: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam_node_240p_10f
+.PHONY : usb_cam_node_240p_10f
+
+# fast build rule for target.
+usb_cam_node_240p_10f/fast:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build.make usb_cam/CMakeFiles/usb_cam_node_240p_10f.dir/build
+.PHONY : usb_cam_node_240p_10f/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -909,6 +922,7 @@ help:
 	@echo "... usb_cam_node"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_lisp"
+	@echo "... usb_cam_node_240p_10f"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... geometry_msgs_generate_messages_cpp"

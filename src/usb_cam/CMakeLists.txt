@@ -50,12 +50,26 @@ target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
 )
 
+## Declare a cpp executable
+add_executable(${PROJECT_NAME}_node_240p_10f nodes/usb_cam_node_240p_10f.cpp)
+target_link_libraries(${PROJECT_NAME}_node_240p_10f
+  ${PROJECT_NAME}
+  ${avcodec_LIBRARIES}
+  ${swscale_LIBRARIES}
+  ${catkin_LIBRARIES}
+)
+
 #############
 ## Install ##
 #############
 
 ## Mark executables and/or libraries for installation
 install(TARGETS ${PROJECT_NAME}_node ${PROJECT_NAME}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+)
+
+install(TARGETS ${PROJECT_NAME}_node_240p_10f ${PROJECT_NAME}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
