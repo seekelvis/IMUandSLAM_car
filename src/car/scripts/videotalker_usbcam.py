@@ -15,7 +15,7 @@ def webcamImagePub():
     # queue_size should be small in order to make it 'real_time'
     # or the node will pub the past_frame
     img_pub = rospy.Publisher('usb_cam/image_raw', Image, queue_size=2)
-    rate = rospy.Rate(10) # 5hz
+    rate = rospy.Rate(30) # 5hz
  
     # make a video_object and init the video object
     cap = cv2.VideoCapture(0)
